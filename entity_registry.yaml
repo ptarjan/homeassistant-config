@@ -1,0 +1,8 @@
+sensor.pt_battery_level:
+  name:
+  platform: ios
+  unique_id: level_pt
+sensor.pt_battery_state:
+  name:
+  platform: ios
+  unique_id: state_pt
