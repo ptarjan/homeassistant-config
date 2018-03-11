@@ -1,1 +1,48 @@
-[]
+- id: door_opened
+  alias: Door Opened
+  trigger:
+  - entity_id: group.doors
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data_template:
+      message: '{{ trigger.to_state.attributes.friendly_name }} has been opened'
+    service: notify.phones
+- id: door_closed
+  alias: Door Closed
+  trigger:
+  - entity_id: group.doors
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data_template:
+      message: '{{ trigger.to_state.attributes.friendly_name }} has been closed'
+    service: notify.phones
+- id: window_opened
+  alias: Window Opened
+  trigger:
+  - entity_id: group.windows
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data_template:
+      message: '{{ trigger.to_state.attributes.friendly_name }} has been opened'
+    service: notify.phones
+- id: window_closed
+  alias: Window Closed
+  trigger:
+  - entity_id: group.windows
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data_template:
+      message: '{{ trigger.to_state.attributes.friendly_name }} has been closed'
+    service: notify.phones
