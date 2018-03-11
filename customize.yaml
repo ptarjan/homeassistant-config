@@ -1,0 +1,6 @@
+cover.garage_door_opener_2:
+  hidden: true
+climate.home_main_floor_thermostat:
+  hidden: true
+climate.home_upstairs_thermostat:
+  hidden: true
