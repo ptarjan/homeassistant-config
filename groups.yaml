@@ -11,6 +11,7 @@ doors:
   - binary_sensor.garage_outdoor_door
   - binary_sensor.guest_room
   - binary_sensor.guest_room
+  - cover.garage_door_opener
 windows:
   name: Windows
   view: yes
