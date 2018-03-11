@@ -6,3 +6,59 @@ sensor.pt_battery_state:
   name:
   platform: ios
   unique_id: state_pt
+binary_sensor.driveway_motion:
+  name:
+  platform: hikvision
+  unique_id: 53948299-6eee-11b3-81ad-1868cb51f332.Motion.1
+binary_sensor.ip_camera_motion:
+  name:
+  platform: hikvision
+  unique_id: f9ba0d85-f70b-11b4-83a0-a414374ae45a.Motion.1
+binary_sensor.ip_camera_motion_2:
+  name:
+  platform: hikvision
+  unique_id: 5394830a-6eee-11b3-81ad-1868cb51f3a3.Motion.1
+binary_sensor.ip_camera_motion_3:
+  name:
+  platform: hikvision
+  unique_id: f9ba0cdc-f70b-11b4-83a0-a414374ae3b1.Motion.1
+media_player.plex_web_chrome:
+  name:
+  platform: plex
+  unique_id: sxvr6yyyqeag0fif82949rudi
+media_player.chrome:
+  name:
+  platform: plex
+  unique_id: x1kpwa5ebbkmnbardpss7qhk
+media_player.living_room_tv:
+  name:
+  platform: cast
+  unique_id: 085fb798-2651-348f-68f2-fed849b94f13
+media_player.master_bedroom_tv:
+  name:
+  platform: cast
+  unique_id: 4d7da54f-3164-1af8-3f3f-d6dd81ab1141
+sensor.michelles_iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_michelles_iphone
+sensor.michelles_iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_michelles_iphone
+media_player.pt:
+  name:
+  platform: plex
+  unique_id: 46593B74-6B12-4A87-86C8-ECE5DCF2BA9F
+media_player.unnamed_device:
+  name:
+  platform: plex
+  unique_id: syhj7t40ephhyqfrq3oemnmg
+climate.upstairs:
+  name:
+  platform: nest
+  unique_id: d5I_uF8I2uGEiV_gEsjB4YfYgG3rcqs8
+climate.main_floor:
+  name:
+  platform: nest
+  unique_id: d5I_uF8I2uE4yDKo2hMD6ofYgG3rcqs8

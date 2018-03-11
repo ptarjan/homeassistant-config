@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 37.5081
-  longitude: -122.301
+  latitude: !secret latitude
+  longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
   # metric for Metric, imperial for Imperial
@@ -51,10 +51,6 @@ map:
 
 # Track the sun
 sun:
-
-# Weather prediction
-sensor:
-  - platform: yr
 
 # Text to speech
 tts:
@@ -140,6 +136,22 @@ envisalink:
     1:
       name: 'Home Alarm'
 
+media_player:
+  - platform: cast
+    host: 192.168.1.130
+  - platform: cast
+    host: 192.168.1.131
+  - platform: plex
+    host: 192.168.1.100
+  - platform: webostv
+    host: 192.168.1.161
+  - platform: denon
+    host: 192.168.1.171
+  - platform: sonos
+    host: 192.168.1.78
+
+wemo:
+
 ios:
   push:
     categories:
@@ -160,3 +172,84 @@ ios:
             behavior: 'textInput'
             textInputButtonTitle: 'Silencio!'
             textInputPlaceholder: 'Placeholder'
+
+binary_sensor:
+  - platform: hikvision
+    host: 192.168.1.10
+    username: admin
+    password: !secret hikvision_password
+  - platform: hikvision
+    host: 192.168.1.11
+    username: admin
+    password: !secret hikvision_password
+  - platform: hikvision
+    host: 192.168.1.12
+    username: admin
+    password: !secret hikvision_password
+  - platform: hikvision
+    host: 192.168.1.13
+    username: admin
+    password: !secret hikvision_password
+
+camera:
+  - platform: generic
+    name: Driveway
+    still_image_url: http://192.168.1.10/Streaming/channels/1/picture
+    username: admin
+    password: !secret hikvision_password
+  - platform: generic
+    name: Back
+    still_image_url: http://192.168.1.11/Streaming/channels/1/picture
+    username: admin
+    password: !secret hikvision_password
+  - platform: generic
+    name: Side
+    still_image_url: http://192.168.1.12/Streaming/channels/1/picture
+    username: admin
+    password: !secret hikvision_password
+  - platform: generic
+    name: Entrance
+    still_image_url: http://192.168.1.13/Streaming/channels/1/picture
+    username: admin
+    password: !secret hikvision_password
+
+sensor:
+  - platform: yr
+  - platform: ohmconnect
+    id: !secret ohmconnect_id
+
+cover:
+  - platform: myq
+    username: !secret myq_username
+    password: !secret myq_password
+    type: chamberlain
+
+notify:
+  - name: phones
+    platform: group
+    services:
+      - service: ios_pt
+      - service: ios_michelles_iphone
+
+nest:
+    client_id: !secret nest_id
+    client_secret: !secret nest_secret
+
+
+switch:
+#  - platform: hikvisioncam
+#    host: 192.168.1.10
+#  - platform: hikvisioncam
+#    host: 192.168.1.11
+#  - platform: hikvisioncam
+#    host: 192.168.1.12
+#  - platform: hikvisioncam
+#    host: 192.168.1.13
+#  - platform: tplink
+#    host: IP_ADDRESS
+
+#bmw_connected_drive:
+#  name:
+#    username: !secret bmw_username
+#    password: !secret bmw_password
+#    country: USA
