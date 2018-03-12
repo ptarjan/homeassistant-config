@@ -1,7 +1,7 @@
 - id: door_opened
   alias: Door Opened
   trigger:
-    platform: state
+  - platform: state
     from: 'off'
     to: 'on'
     entity_id: 
@@ -14,17 +14,21 @@
     - binary_sensor.garage_outdoor_door
     - binary_sensor.guest_room
     - binary_sensor.guest_room
-    - cover.garage_door_opener
+  - platform: state
+    from: 'closed'
+    to: 'open'
+    entity_id: cover.garage_door_opener
   condition: []
   action:
   - data_template:
       message: '{{ trigger.to_state.attributes.friendly_name }} has been opened'
     service: notify.phones
+
 - id: door_closed
   alias: Door Closed
   trigger:
+  - platform: state
     from: 'on'
-    platform: state
     to: 'off'
     entity_id:
     - binary_sensor.front_door
@@ -36,7 +40,10 @@
     - binary_sensor.garage_outdoor_door
     - binary_sensor.guest_room
     - binary_sensor.guest_room
-    - cover.garage_door_opener
+  - platform: state
+    from: 'closed'
+    to: 'open'
+    entity_id: cover.garage_door_opener
   condition: []
   action:
   - data_template:
@@ -143,9 +150,10 @@
     from: 'closed'
     to: 'open'
     for:
-      minutes: 10
-    action:
-      service: notify.phones
+      minutes: 5
+  action:
+    service: notify.phones
+    data:
       message: The garage door is still open
 
 - id: front_door_left_open
@@ -156,7 +164,22 @@
     from: 'closed'
     to: 'open'
     for:
-      minutes: 10
-    action:
-      service: notify.phones
+      minutes: 5
+  action:
+    service: notify.phones
+    data:
       message: The front door is still open
+
+- id: garage_little_door_left_open
+  alias: Garage little door is still open
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_outside_door
+    from: 'closed'
+    to: 'open'
+    for:
+      minutes: 5
+  action:
+    service: notify.phones
+    data:
+      message: The little garage door is still open
