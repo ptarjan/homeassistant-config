@@ -62,3 +62,11 @@ climate.main_floor:
   name:
   platform: nest
   unique_id: d5I_uF8I2uE4yDKo2hMD6ofYgG3rcqs8
+media_player.chrome_2:
+  name:
+  platform: plex
+  unique_id: 44n2t891dibak1nq7eafvfgb
+media_player.chrome_3:
+  name:
+  platform: plex
+  unique_id: 6x4p112k3rvnvj2uccmtnwse

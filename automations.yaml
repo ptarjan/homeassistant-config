@@ -6,13 +6,9 @@
     to: 'on'
     entity_id: 
     - binary_sensor.front_door
-    - binary_sensor.front_door
     - binary_sensor.back_door
     - binary_sensor.garage_inside_door
-    - binary_sensor.garage_inside_door
     - binary_sensor.garage_outdoor_door
-    - binary_sensor.garage_outdoor_door
-    - binary_sensor.guest_room
     - binary_sensor.guest_room
   - platform: state
     from: 'closed'
@@ -32,13 +28,9 @@
     to: 'off'
     entity_id:
     - binary_sensor.front_door
-    - binary_sensor.front_door
     - binary_sensor.back_door
     - binary_sensor.garage_inside_door
-    - binary_sensor.garage_inside_door
     - binary_sensor.garage_outdoor_door
-    - binary_sensor.garage_outdoor_door
-    - binary_sensor.guest_room
     - binary_sensor.guest_room
   - platform: state
     from: 'closed'
@@ -58,25 +50,14 @@
     to: 'on'
     entity_id: 
     - binary_sensor.back_bedroom_window
-    - binary_sensor.back_bedroom_window
-    - binary_sensor.back_bedroom_window
-    - binary_sensor.dining_room_window
     - binary_sensor.dining_room_window
     - binary_sensor.entrance_window
-    - binary_sensor.entrance_window
-    - binary_sensor.front_bedroom_window
     - binary_sensor.front_bedroom_window
     - binary_sensor.laundry_room_window
-    - binary_sensor.laundry_room_window
-    - binary_sensor.living_room_window
     - binary_sensor.living_room_window
     - binary_sensor.master_bathroom_window
-    - binary_sensor.master_bathroom_window
-    - binary_sensor.master_bedroom_window
     - binary_sensor.master_bedroom_window
     - binary_sensor.office_window
-    - binary_sensor.office_window
-    - binary_sensor.stairway_window
     - binary_sensor.stairway_window
   condition: []
   action:
@@ -92,25 +73,14 @@
     to: 'off'
     entity_id:
     - binary_sensor.back_bedroom_window
-    - binary_sensor.back_bedroom_window
-    - binary_sensor.back_bedroom_window
-    - binary_sensor.dining_room_window
     - binary_sensor.dining_room_window
     - binary_sensor.entrance_window
-    - binary_sensor.entrance_window
-    - binary_sensor.front_bedroom_window
     - binary_sensor.front_bedroom_window
     - binary_sensor.laundry_room_window
-    - binary_sensor.laundry_room_window
-    - binary_sensor.living_room_window
     - binary_sensor.living_room_window
     - binary_sensor.master_bathroom_window
-    - binary_sensor.master_bathroom_window
-    - binary_sensor.master_bedroom_window
     - binary_sensor.master_bedroom_window
     - binary_sensor.office_window
-    - binary_sensor.office_window
-    - binary_sensor.stairway_window
     - binary_sensor.stairway_window
   condition: []
   action:
