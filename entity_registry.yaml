@@ -74,3 +74,7 @@ media_player.chrome_4:
   name:
   platform: plex
   unique_id: g3mynh0bo1akv8g9zz2ultsh
+media_player.living_room:
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E937756E7901400
