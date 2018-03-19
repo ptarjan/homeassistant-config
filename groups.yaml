@@ -1,6 +1,6 @@
 doors:
   name: Doors
-  view: yes
+  view: no
   entities:
   - binary_sensor.front_door
   - binary_sensor.back_door
@@ -10,7 +10,7 @@ doors:
   - cover.garage_door_opener
 windows:
   name: Windows
-  view: yes
+  view: no
   entities:
   - binary_sensor.back_bedroom_window
   - binary_sensor.dining_room_window
