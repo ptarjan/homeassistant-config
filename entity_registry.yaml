@@ -78,3 +78,23 @@ media_player.living_room:
   name:
   platform: sonos
   unique_id: RINCON_B8E937756E7901400
+media_player.basement_speaker:
+  name:
+  platform: cast
+  unique_id: 809fae9e-2628-d972-700f-f24944b59d72
+media_player.kitchen_speaker:
+  name:
+  platform: cast
+  unique_id: 5a4d581e-9413-cb7f-acb1-3de23eeba662
+media_player.office_speaker:
+  name:
+  platform: cast
+  unique_id: ca2286a0-c11e-c0dc-8fac-d5df9da77e65
+media_player.master_bedroom_speaker:
+  name:
+  platform: cast
+  unique_id: 9c2c6e38-df9a-bbdf-ff6c-e237964b2382
+media_player.home:
+  name:
+  platform: cast
+  unique_id: a7915057-751a-4a71-9d88-b823fd96f6a3

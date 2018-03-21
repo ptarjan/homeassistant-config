@@ -237,6 +237,10 @@ nest:
 
 mqtt:
 
+upnp:
+
+updater:
+
 
 switch:
 #  - platform: hikvisioncam
