@@ -79,7 +79,7 @@ envisalink:
       name: 'Front Door'
       type: 'door'
     02:
-      name: 'Unknown 2'
+      name: 'Front Door Motion'
       type: 'motion'
     03:
       name: 'Upstairs Motion'
@@ -97,8 +97,8 @@ envisalink:
       name: 'Office Window'
       type: 'window'
     08:
-      name: 'Unknown 8'
-      type: 'motion'
+      name: 'Guest Door'
+      type: 'door'
     09:
       name: 'Laundry Room Window'
       type: 'window'
@@ -175,41 +175,31 @@ ios:
 
 binary_sensor:
   - platform: hikvision
-    host: 192.168.1.10
-    username: admin
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.1.11
-    username: admin
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.1.12
-    username: admin
-    password: !secret hikvision_password
-  - platform: hikvision
-    host: 192.168.1.13
+    host: 192.168.1.14
+    port: 80
+    ssl: False
     username: admin
     password: !secret hikvision_password
 
 camera:
   - platform: generic
     name: Driveway
-    still_image_url: http://192.168.1.10/Streaming/channels/1/picture
-    username: admin
-    password: !secret hikvision_password
-  - platform: generic
-    name: Back
-    still_image_url: http://192.168.1.11/Streaming/channels/1/picture
-    username: admin
-    password: !secret hikvision_password
-  - platform: generic
-    name: Side
-    still_image_url: http://192.168.1.12/Streaming/channels/1/picture
+    still_image_url: http://192.168.1.14/ISAPI/Streaming/channels/101/picture
     username: admin
     password: !secret hikvision_password
   - platform: generic
     name: Entrance
-    still_image_url: http://192.168.1.13/Streaming/channels/1/picture
+    still_image_url: http://192.168.1.14/ISAPI/Streaming/channels/201/picture
+    username: admin
+    password: !secret hikvision_password
+  - platform: generic
+    name: Side
+    still_image_url: http://192.168.1.14/ISAPI/Streaming/channels/301/picture
+    username: admin
+    password: !secret hikvision_password
+  - platform: generic
+    name: Back
+    still_image_url: http://192.168.1.14/ISAPI/Streaming/channels/401/picture
     username: admin
     password: !secret hikvision_password
 
@@ -238,8 +228,6 @@ nest:
 mqtt:
 
 upnp:
-
-updater:
 
 
 switch:
