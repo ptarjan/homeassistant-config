@@ -9,7 +9,7 @@
     - binary_sensor.back_door
     - binary_sensor.garage_inside_door
     - binary_sensor.garage_outdoor_door
-    - binary_sensor.guest_room
+    - binary_sensor.guest_door
   - platform: state
     from: 'closed'
     to: 'open'
@@ -31,7 +31,7 @@
     - binary_sensor.back_door
     - binary_sensor.garage_inside_door
     - binary_sensor.garage_outdoor_door
-    - binary_sensor.guest_room
+    - binary_sensor.guest_door
   - platform: state
     from: 'closed'
     to: 'open'
