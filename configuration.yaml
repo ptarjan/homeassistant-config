@@ -63,6 +63,8 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
+wink:
+
 envisalink:
   host: 192.168.1.19
   panel_type: DSC
@@ -227,8 +229,7 @@ nest:
 
 mqtt:
 
-upnp:
-
+# upnp:
 
 switch:
 #  - platform: hikvisioncam
@@ -239,8 +240,8 @@ switch:
 #    host: 192.168.1.12
 #  - platform: hikvisioncam
 #    host: 192.168.1.13
-#  - platform: tplink
-#    host: IP_ADDRESS
+  - platform: tplink
+    host: 192.168.1.237
 
 #bmw_connected_drive:
 #  name:

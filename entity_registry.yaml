@@ -98,3 +98,23 @@ media_player.home:
   name:
   platform: cast
   unique_id: a7915057-751a-4a71-9d88-b823fd96f6a3
+media_player.chrome_5:
+  name:
+  platform: plex
+  unique_id: bqxs46ttrcd95sf1p7edkulu
+media_player.chrome_6:
+  name:
+  platform: plex
+  unique_id: w5dm98xib9isr0clvv089q1b
+binary_sensor.network_video_recorder_motion_1:
+  name:
+  platform: hikvision
+  unique_id: 48373536-3337-3830-3838-54c415ec787c.Motion.1
+media_player.unnamed_device_2:
+  name:
+  platform: plex
+  unique_id: nxse8h6i3a6ecdis15fn3o2r
+media_player.michelles_iphone:
+  name:
+  platform: plex
+  unique_id: 45FA9222-00F5-4761-BCAF-662815E91585
