@@ -106,11 +106,35 @@
     entity_id: binary_sensor.front_door
     to: 'off'
     for:
-      seconds: 30
+      seconds: 60
   action:
     service: light.turn_off
     data:
       entity_id: light.entrance_light
+
+- id: garage_door_light_on
+  alias: Turn on stairway light when the inside garage door opens
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_inside_door
+    to: 'on'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: switch.downstairs_light
+
+- id: garage_door_light_off
+  alias: Turn off stairway light after 1 min of door closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_inside_door
+    to: 'off'
+    for:
+      seconds: 60
+  action:
+    service: light.turn_off
+    data:
+      entity_id: switch.downstairs_light
 
 - id: garage_door_left_open
   alias: Garage door is still open
