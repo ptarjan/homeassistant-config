@@ -118,3 +118,7 @@ media_player.michelles_iphone:
   name:
   platform: plex
   unique_id: 45FA9222-00F5-4761-BCAF-662815E91585
+media_player.chrome_7:
+  name:
+  platform: plex
+  unique_id: 1vgls6cfwi1qyfziwaqk76ms
