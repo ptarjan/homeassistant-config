@@ -22,8 +22,10 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: home.paulisageek.com:8123
+  cors_allowed_origins:
+    - https://reformedreality.com
+    - http://reformedreality.com
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -57,7 +59,7 @@ tts:
   - platform: google
 
 # Cloud
-cloud:
+# cloud:
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -141,14 +143,21 @@ envisalink:
 media_player:
   - platform: cast
     host: 192.168.1.130
+
   - platform: cast
     host: 192.168.1.131
+
   - platform: plex
     host: 192.168.1.100
+
   - platform: webostv
-    host: 192.168.1.161
+    host: 192.168.1.162
+
   - platform: denon
     host: 192.168.1.171
+    zones:
+    - zone: Zone2
+
   - platform: sonos
     host: 192.168.1.78
 
@@ -240,11 +249,14 @@ switch:
 #    host: 192.168.1.12
 #  - platform: hikvisioncam
 #    host: 192.168.1.13
-  - platform: tplink
-    host: 192.168.1.237
+#  - platform: tplink
+#    host: 192.168.1.237
 
 #bmw_connected_drive:
 #  name:
 #    username: !secret bmw_username
 #    password: !secret bmw_password
 #    country: USA
+
+homekit:
+

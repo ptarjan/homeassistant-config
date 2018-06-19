@@ -122,3 +122,11 @@ media_player.chrome_7:
   name:
   platform: plex
   unique_id: 1vgls6cfwi1qyfziwaqk76ms
+media_player.ipad:
+  name:
+  platform: plex
+  unique_id: 650F94BA-ED85-4457-B653-B6B6E5191903
+media_player.55_tcl_roku_tv:
+  name:
+  platform: roku
+  unique_id: YN001L064985
