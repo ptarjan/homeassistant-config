@@ -1,132 +1,185 @@
 sensor.pt_battery_level:
+  config_entry_id:
   name:
   platform: ios
   unique_id: level_pt
 sensor.pt_battery_state:
+  config_entry_id:
   name:
   platform: ios
   unique_id: state_pt
 binary_sensor.driveway_motion:
+  config_entry_id:
   name:
   platform: hikvision
   unique_id: 53948299-6eee-11b3-81ad-1868cb51f332.Motion.1
 binary_sensor.ip_camera_motion:
+  config_entry_id:
   name:
   platform: hikvision
   unique_id: f9ba0d85-f70b-11b4-83a0-a414374ae45a.Motion.1
 binary_sensor.ip_camera_motion_2:
+  config_entry_id:
   name:
   platform: hikvision
   unique_id: 5394830a-6eee-11b3-81ad-1868cb51f3a3.Motion.1
 binary_sensor.ip_camera_motion_3:
+  config_entry_id:
   name:
   platform: hikvision
   unique_id: f9ba0cdc-f70b-11b4-83a0-a414374ae3b1.Motion.1
 media_player.plex_web_chrome:
+  config_entry_id:
   name:
   platform: plex
   unique_id: sxvr6yyyqeag0fif82949rudi
 media_player.chrome:
+  config_entry_id:
   name:
   platform: plex
   unique_id: x1kpwa5ebbkmnbardpss7qhk
 media_player.living_room_tv:
+  config_entry_id:
   name:
   platform: cast
   unique_id: 085fb798-2651-348f-68f2-fed849b94f13
 media_player.master_bedroom_tv:
+  config_entry_id:
   name:
   platform: cast
   unique_id: 4d7da54f-3164-1af8-3f3f-d6dd81ab1141
 sensor.michelles_iphone_battery_state:
+  config_entry_id:
   name:
   platform: ios
   unique_id: state_michelles_iphone
 sensor.michelles_iphone_battery_level:
+  config_entry_id:
   name:
   platform: ios
   unique_id: level_michelles_iphone
 media_player.pt:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 46593B74-6B12-4A87-86C8-ECE5DCF2BA9F
 media_player.unnamed_device:
+  config_entry_id:
   name:
   platform: plex
   unique_id: syhj7t40ephhyqfrq3oemnmg
 climate.upstairs:
+  config_entry_id: 0a9e201d9e5a4b3eb74141b401299a28
   name:
   platform: nest
   unique_id: d5I_uF8I2uGEiV_gEsjB4YfYgG3rcqs8
 climate.main_floor:
+  config_entry_id: 0a9e201d9e5a4b3eb74141b401299a28
   name:
   platform: nest
   unique_id: d5I_uF8I2uE4yDKo2hMD6ofYgG3rcqs8
 media_player.chrome_2:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 44n2t891dibak1nq7eafvfgb
 media_player.chrome_3:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 6x4p112k3rvnvj2uccmtnwse
 media_player.chrome_4:
+  config_entry_id:
   name:
   platform: plex
   unique_id: g3mynh0bo1akv8g9zz2ultsh
 media_player.living_room:
+  config_entry_id:
   name:
   platform: sonos
   unique_id: RINCON_B8E937756E7901400
 media_player.basement_speaker:
+  config_entry_id: 4709550143ac435491382a4c200b03db
   name:
   platform: cast
   unique_id: 809fae9e-2628-d972-700f-f24944b59d72
 media_player.kitchen_speaker:
+  config_entry_id: 4709550143ac435491382a4c200b03db
   name:
   platform: cast
   unique_id: 5a4d581e-9413-cb7f-acb1-3de23eeba662
 media_player.office_speaker:
+  config_entry_id: 4709550143ac435491382a4c200b03db
   name:
   platform: cast
   unique_id: ca2286a0-c11e-c0dc-8fac-d5df9da77e65
 media_player.master_bedroom_speaker:
+  config_entry_id: 4709550143ac435491382a4c200b03db
   name:
   platform: cast
   unique_id: 9c2c6e38-df9a-bbdf-ff6c-e237964b2382
 media_player.home:
+  config_entry_id: 4709550143ac435491382a4c200b03db
   name:
   platform: cast
   unique_id: a7915057-751a-4a71-9d88-b823fd96f6a3
 media_player.chrome_5:
+  config_entry_id:
   name:
   platform: plex
   unique_id: bqxs46ttrcd95sf1p7edkulu
 media_player.chrome_6:
+  config_entry_id:
   name:
   platform: plex
   unique_id: w5dm98xib9isr0clvv089q1b
 binary_sensor.network_video_recorder_motion_1:
+  config_entry_id:
   name:
   platform: hikvision
   unique_id: 48373536-3337-3830-3838-54c415ec787c.Motion.1
 media_player.unnamed_device_2:
+  config_entry_id:
   name:
   platform: plex
   unique_id: nxse8h6i3a6ecdis15fn3o2r
 media_player.michelles_iphone:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 45FA9222-00F5-4761-BCAF-662815E91585
 media_player.chrome_7:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 1vgls6cfwi1qyfziwaqk76ms
 media_player.ipad:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 650F94BA-ED85-4457-B653-B6B6E5191903
 media_player.55_tcl_roku_tv:
+  config_entry_id:
   name:
   platform: roku
   unique_id: YN001L064985
+media_player.chrome_8:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: tltap4go6ghz1tt9
+media_player.55_tcl_roku_tv_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 5a4f6fc8c5018ac9ff1d80981feedf8b
+media_player.man_cave_tv:
+  config_entry_id: 4709550143ac435491382a4c200b03db
+  name:
+  platform: cast
+  unique_id: 9f7cdb4b-5d4c-0997-d4cb-6cddbc0a8f0f
+media_player.chrome_9:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 3k1qd9nqgolirc1fvncc67be
