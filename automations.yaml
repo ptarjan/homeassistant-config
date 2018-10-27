@@ -1,10 +1,9 @@
-# Notify on any opening
 - id: door_opened
   alias: Door Opened
   trigger:
   - platform: state
-    from: 'off'
-    to: 'on'
+    from: "off"
+    to: "on"
     for:
       seconds: 1
     entity_id:
@@ -26,21 +25,19 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
-    from: 'closed'
-    to: 'open'
+    from: closed
+    to: open
     entity_id: cover.garage_door_opener
-  condition: []
   action:
   - data_template:
       message: '{{ trigger.to_state.attributes.friendly_name }} has been opened'
     service: notify.phones
-
 - id: door_closed
   alias: Door Closed
   trigger:
   - platform: state
-    from: 'on'
-    to: 'off'
+    from: "on"
+    to: "off"
     for:
       seconds: 1
     entity_id:
@@ -62,94 +59,87 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
-    from: 'closed'
-    to: 'open'
+    from: closed
+    to: open
     entity_id: cover.garage_door_opener
-  condition: []
   action:
   - data_template:
       message: '{{ trigger.to_state.attributes.friendly_name }} has been closed'
     service: notify.phones
 
-# Alert if open too long
-
 - id: door_left_open
   alias: Door is still open
   trigger:
   - platform: state
-    from: 'off'
-    to: 'on'
+    from: "off"
+    to: "on"
     for:
-      seconds: 5
+      minutes: 5
     entity_id:
-      - binary_sensor.front_door
-      - binary_sensor.back_door
-      - binary_sensor.garage_outside_door
-      - binary_sensor.old_gate_opened
-      - binary_sensor.new_gate_opened
+    - binary_sensor.front_door
+    - binary_sensor.back_door
+    - binary_sensor.garage_outside_door
+    - binary_sensor.old_gate_opened
+    - binary_sensor.new_gate_opened
   - platform: state
-    from: 'closed'
-    to: 'open'
+    from: closed
+    to: open
     for:
-      seconds: 5
+      minutes: 5
     entity_id: cover.garage_door_opener
   action:
-    service: notify.phones
-    data:
+  - data_template:
       message: The {{ trigger.to_state.attributes.friendly_name }} is still open
+    service: notify.phones
 
-# Turn on stuff when stuff opens
 
 - id: entrance_door_light_on
   alias: Turn on entrance light
   trigger:
     platform: state
     entity_id: binary_sensor.front_door
-    to: 'on'
+    to: "on"
   action:
     service: light.turn_on
     data:
       entity_id: light.entrance_light
-
 - id: entrance_door_light_off
   alias: Turn off entrance light
   trigger:
     platform: state
     entity_id: binary_sensor.front_door
-    to: 'off'
+    to: "off"
     for:
       seconds: 60
   action:
     service: light.turn_off
     data:
       entity_id: light.entrance_light
-
 - id: garage_door_light_on
   alias: Turn on stairway light
   trigger:
     platform: state
     entity_id: binary_sensor.garage_inside_door
-    to: 'on'
+    to: "on"
   action:
-    - service: homeassistant.turn_on
-      data:
-        entity_id: switch.downstairs_light
-    - service: light.turn_on
-      data:
-        entity_id: light.downstairs_entrance
-
+  - service: homeassistant.turn_on
+    data:
+      entity_id: switch.downstairs_light
+  - service: light.turn_on
+    data:
+      entity_id: light.downstairs_entrance
 - id: garage_door_light_off
   alias: Turn off stairway light
   trigger:
     platform: state
     entity_id: binary_sensor.garage_inside_door
-    to: 'off'
+    to: "off"
     for:
       seconds: 60
   action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id: switch.downstairs_light
-    - service: light.turn_off
-      data:
-        entity_id: light.downstairs_entrance
+  - service: homeassistant.turn_off
+    data:
+      entity_id: switch.downstairs_light
+  - service: light.turn_off
+    data:
+      entity_id: light.downstairs_entrance
