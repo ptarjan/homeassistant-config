@@ -236,6 +236,13 @@ nest:
     client_id: !secret nest_id
     client_secret: !secret nest_secret
 
+rachio:
+    api_key: !secret rachio_api_key
+
+blink:
+    username: !secret blink_username
+    password: !secret blink_password
+
 # mqtt:
 
 # upnp:
