@@ -89,7 +89,7 @@
     entity_id: cover.garage_door_opener
   action:
   - data_template:
-      message: The {{ trigger.to_state.attributes.friendly_name }} is still open
+      message: "\U0001F514 The {{ trigger.to_state.attributes.friendly_name }} is still open"
     service: notify.phones
 
 
