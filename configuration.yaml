@@ -141,12 +141,6 @@ envisalink:
       name: 'Home Alarm'
 
 media_player:
-  - platform: cast
-    host: 192.168.1.130
-
-  - platform: cast
-    host: 192.168.1.131
-
   - platform: plex
     host: 192.168.1.100
 
@@ -157,9 +151,6 @@ media_player:
     host: 192.168.1.171
     zones:
     - zone: Zone2
-
-  - platform: sonos
-    host: 192.168.1.78
 
 wemo:
 
