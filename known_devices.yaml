@@ -1,0 +1,13 @@
+pt:
+  hide_if_away: false
+  mac: D8:8F:76:86:C6:42
+  name: Paul
+  picture: https://paultarjan.com/paul.jpg
+  track: true
+
+michelles_iphone:
+  hide_if_away: false
+  mac:
+  name: Michelle
+  picture: https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38277375_10100812556887487_9018743452522774528_o.jpg?_nc_cat=109&_nc_ht=scontent-sjc3-1.xx&oh=43d76bfdb43151087a94fe53785eebad&oe=5C9AA23A
+  track: true
