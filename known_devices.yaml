@@ -11,3 +11,19 @@ michelle:
   name: Michelle
   picture: https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/38277375_10100812556887487_9018743452522774528_o.jpg?_nc_cat=109&_nc_ht=scontent-sjc3-1.xx&oh=43d76bfdb43151087a94fe53785eebad&oe=5C9AA23A
   track: true
+
+pt:
+  hide_if_away: false
+  icon:
+  mac:
+  name: pt
+  picture:
+  track: true
+
+pt_owntracks_b0683ae0f99e439083b0383aca2676ec:
+  hide_if_away: false
+  icon:
+  mac:
+  name: pt OwnTracks
+  picture:
+  track: true
