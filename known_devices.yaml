@@ -30,3 +30,11 @@ d88f768635b6:
   name: michelle nmap
   picture:
   track: true
+
+d88f7686c642:
+  hide_if_away: false
+  icon:
+  mac: D8:8F:76:86:C6:42
+  name: paul nmap
+  picture:
+  track: true
