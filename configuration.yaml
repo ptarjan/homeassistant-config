@@ -273,5 +273,5 @@ switch:
 #    password: !secret bmw_password
 #    country: USA
 
-homekit:
+# homekit:
 
