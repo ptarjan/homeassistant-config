@@ -7,14 +7,6 @@ pt:
   picture:
   track: true
 
-pt_owntracks_b0683ae0f99e439083b0383aca2676ec:
-  hide_if_away: false
-  icon:
-  mac:
-  name: pt OwnTracks
-  picture:
-  track: true
-
 michelles_iphone:
   hide_if_away: false
   icon:
