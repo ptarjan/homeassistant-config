@@ -21,7 +21,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+  # api_password: !secret http_password
   base_url: home.paulisageek.com:8123
 
 # Checks for available updates
@@ -239,10 +239,6 @@ device_tracker:
     consider_home: 600
     home_interval: 10
     interval_seconds: 10
-  - platform: owntracks
-    track_new_devices: yes
-    consider_home: 0:03
-    waypoints: True
 
 # mqtt:
 
