@@ -4,3 +4,7 @@ climate.home_main_floor_thermostat:
   hidden: true
 climate.home_upstairs_thermostat:
   hidden: true
+binary_sensor.old_gate_opened:
+  friendly_name: Old Gate
+binary_sensor.new_gate_opened:
+  friendly_name: New Gate

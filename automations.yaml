@@ -25,7 +25,6 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
-    from: closed
     to: open
     entity_id: cover.garage_door_opener
   action:
@@ -59,8 +58,7 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
-    from: closed
-    to: open
+    to: closed
     entity_id: cover.garage_door_opener
   action:
   - data_template:
@@ -82,7 +80,6 @@
     - binary_sensor.old_gate_opened
     - binary_sensor.new_gate_opened
   - platform: state
-    from: closed
     to: open
     for:
       minutes: 5
@@ -92,6 +89,17 @@
       message: "\U0001F514 The {{ trigger.to_state.attributes.friendly_name }} is still open"
     service: notify.phones
 
+- id: autoclose_garage_door
+  alias: Autoclose Garage Door
+  trigger:
+  - platform: state
+    to: open
+    for:
+      minutes: 6
+    entity_id: cover.garage_door_opener
+  action:
+  - entity_id: cover.garage_door_opener
+    service: cover.close_cover
 
 - id: entrance_door_light_on
   alias: Turn on entrance light
@@ -128,6 +136,9 @@
   - service: light.turn_on
     data:
       entity_id: light.downstairs_entrance
+  - service: light.turn_on
+    data:
+      entity_id: light.hallway_light
 - id: garage_door_light_off
   alias: Turn off stairway light
   trigger:
@@ -143,10 +154,15 @@
   - service: light.turn_off
     data:
       entity_id: light.downstairs_entrance
+  - service: light.turn_off
+    data:
+      entity_id: light.hallway_light
+
 
 # Alarms
 
-- alias: 'Activate alarm when away'
+- id: leave_home
+  alias: 'Leaving Home'
   trigger:
     - platform: state
       entity_id: group.all_devices
@@ -156,13 +172,21 @@
       entity_id: alarm_control_panel.blink_sync
     - service: alarm_control_panel.alarm_arm_away
       entity_id: alarm_control_panel.home_alarm
-    - service: nest.set_away_mode
+    - service: climate.set_away_mode
       data:
-        away_mode: away
+        entity_id: climate.main_floor
+        away_mode: true
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.upstairs
+        away_mode: true
+    - service: camera.enable_motion_detection
+      entity_id: camera.living_room
     - service: light.turn_off
-      entity_id: group.all_lights
+      entity_id: group.all_lights      
 
-- alias: 'Deactivate alarm when home'
+- id: arrive_home
+  alias: 'Comming Home'
   trigger:
     - platform: state
       entity_id: group.all_devices
@@ -172,6 +196,170 @@
       entity_id: alarm_control_panel.blink_sync
     - service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.home_alarm
-    - service: nest.set_away_mode
+    - service: climate.set_away_mode
       data:
-        away_mode: home
+        entity_id: climate.main_floor
+        away_mode: false
+    - service: climate.set_away_mode
+      data:
+        entity_id: climate.upstairs
+        away_mode: false
+    - service: camera.disable_motion_detection
+      entity_id: camera.living_room
+    - service: light.turn_on
+      entity_id: light.front_outside_light
+    - service: light.turn_on
+      entity_id: light.front_outside_dim_light
+      
+- id: arrive_home_and_stay
+  alias: 'Comming Home And Stay'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'home'
+      for:
+        minutes: 5
+  action:
+    - service: light.turn_off
+      entity_id: light.front_outside_light
+    - service: light.turn_off
+      entity_id: light.front_outside_dim_light
+
+# Blinds
+- id: binds_open
+  alias: 'Main Floor Blinds Open'
+  trigger:
+    platform: time
+    at: "09:00:00"
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+    - service: cover.open_cover
+      entity_id: cover.living_room_shades
+    - service: cover.open_cover
+      entity_id: cover.office_shades
+      
+- id: master_bedroom_binds_open
+  alias: 'Master Bedroom Blinds Open'
+  trigger:
+    platform: time
+    at: "10:00:00"
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:      
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_shades
+
+- id: weekend_binds_open
+  alias: 'Weekend Blinds Open'
+  trigger:
+    platform: time
+    at: "11:00:00"
+  condition:
+    condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+    - service: cover.open_cover
+      entity_id: cover.living_room_shades
+    - service: cover.open_cover
+      entity_id: cover.office_shades
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_shades
+
+- id: sunset_close_blinds
+  alias: 'Sunset Close Blinds'
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    - service: cover.open_cover
+      entity_id: cover.living_room_shades
+    - service: cover.open_cover
+      entity_id: cover.office_shades
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_shades
+      
+- id: sunset_close_blinds_take_2
+  alias: 'Sunset Close Blinds Take 2'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:02:00"
+  action:
+    - service: cover.open_cover
+      entity_id: cover.living_room_shades
+    - service: cover.open_cover
+      entity_id: cover.office_shades
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_shades
+      
+
+
+
+
+# Garbage Day
+
+- id: garbage_day_home
+  alias: 'Garbage Day - Home'
+  initial_state: 'on'
+  trigger:
+    - platform: time
+      at: '20:15:00'
+  condition:
+  - condition: time
+    weekday:
+      - sun
+  - condition: state
+    entity_id: group.all_devices
+    state: 'home'
+  action:
+    - data_template:
+        message: 'Take out the garbage bins'
+      service: notify.phones
+
+- id: garbage_day_away
+  alias: 'Garbage Day - Not Home'
+  initial_state: 'on'
+  trigger:
+    - platform: time
+      at: '20:15:00'
+  condition:
+  - condition: time
+    weekday:
+      - sun
+  - condition: template
+    value_template: "{{ not is_state('group.all_devices', 'home') }}"
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garbage_day_pending
+
+- id: garbage_day_later
+  alias: 'Deferred Garbage Day Notification'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'home'
+  condition:
+  - condition: state
+    entity_id: input_boolean.garbage_day_pending
+    state: 'on'
+  action:
+    - data_template:
+        message: 'Take out the garbage bins'
+      service: notify.phones
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garbage_day_pending

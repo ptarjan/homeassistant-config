@@ -23,9 +23,6 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   base_url: home.paulisageek.com:8123
-  cors_allowed_origins:
-    - https://reformedreality.com
-    - http://reformedreality.com
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -54,9 +51,6 @@ map:
 # Track the sun
 sun:
 
-# Text to speech
-tts:
-  - platform: google
 
 # Cloud
 # cloud:
@@ -234,6 +228,10 @@ ring:
     password: !secret ring_password
 
 device_tracker:
+#  - platform: owntracks
+#    track_new_devices: yes
+#    consider_home: 0:03
+#    waypoints: True
   - platform: nmap_tracker
     hosts:
       - 192.168.1.110
@@ -270,3 +268,8 @@ switch:
 
 # homekit:
 
+system_health:
+
+google_assistant:
+  project_id: paul-s-home-assistant
+  api_key: !secret google_assistant_api_key
