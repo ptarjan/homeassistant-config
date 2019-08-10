@@ -363,3 +363,15 @@
       service: notify.phones
     - service: input_boolean.turn_off
       entity_id: input_boolean.garbage_day_pending
+
+# Addons
+
+- id: letsencrypt_renewal
+  alias: "Let's Encrypt Renewal"
+  trigger:
+  - platform: time
+    at: '00:00:00'
+  action:
+  - service: hassio.addon_restart
+    data:
+      addon: core_letsencrypt
