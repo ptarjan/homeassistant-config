@@ -286,11 +286,11 @@
     platform: sun
     event: sunset
   action:
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.living_room_shades
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.office_shades
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.master_bedroom_shades
       
 - id: sunset_close_blinds_take_2
@@ -300,11 +300,11 @@
     event: sunset
     offset: "00:02:00"
   action:
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.living_room_shades
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.office_shades
-    - service: cover.open_cover
+    - service: cover.close_cover
       entity_id: cover.master_bedroom_shades
       
 
