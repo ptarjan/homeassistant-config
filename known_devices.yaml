@@ -4,7 +4,7 @@ pt:
   icon:
   mac:
   name: pt
-  picture:
+  picture: https://graph.facebook.com/218471/picture
   track: true
 
 michelles_iphone:
@@ -12,6 +12,22 @@ michelles_iphone:
   icon:
   mac:
   name: michelles iphone
+  picture:
+  track: true
+  
+pt_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: pt ping
+  picture: https://graph.facebook.com/218471/picture
+  track: true
+
+michelles_ping:
+  hide_if_away: false
+  icon:
+  mac:
+  name: michelle ping
   picture:
   track: true
 
@@ -28,5 +44,5 @@ d88f7686c642:
   icon:
   mac: D8:8F:76:86:C6:42
   name: paul nmap
-  picture:
+  picture: https://graph.facebook.com/218471/picture
   track: true
