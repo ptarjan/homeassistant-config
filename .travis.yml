@@ -14,4 +14,7 @@ install:
   - pip3 install homeassistant
 script:
   - mv secrets-dummy.yaml secrets.yaml
+  - mkdir /ssl
+  - touch /ssl/fullchain.pem
+  - touch /ssl/privkey.pem
   - hass -c . --script check_config
