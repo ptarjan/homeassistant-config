@@ -12,7 +12,7 @@ michelles_iphone:
   icon:
   mac:
   name: michelles iphone
-  picture:
+  picture: https://graph.facebook.com/120600349/picture
   track: true
   
 pt_ping:
@@ -28,7 +28,7 @@ michelles_ping:
   icon:
   mac:
   name: michelle ping
-  picture:
+  picture: https://graph.facebook.com/120600349/picture
   track: true
 
 d88f768635b6:
@@ -36,7 +36,7 @@ d88f768635b6:
   icon:
   mac: D8:8F:76:86:35:B6
   name: michelle nmap
-  picture:
+  picture: https://graph.facebook.com/120600349/picture
   track: true
 
 d88f7686c642:
