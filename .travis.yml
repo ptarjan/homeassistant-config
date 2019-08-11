@@ -7,18 +7,10 @@
 #
 
 language: python
-
 python:
   - "3.7"
-
-before_install:
-  - cp secrets-dummy.yaml secrets.yaml
-  - touch home-assistant_v2.db
-  - touch home-assistant.log
-  - HA_VERSION=$(<.HA_VERSION)
-
 install:
-  - pip3 install homeassistant==${HA_VERSION}
-
+  - pip3 install homeassistant
 script:
-  - hass --script check_config -c . -f
+  - mv secrets-dummy.yaml secrets.yaml
+  - hass -c . --script check_config
