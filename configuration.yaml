@@ -196,11 +196,6 @@ camera:
     username: admin
     password: !secret hikvision_password
 
-sensor:
-  - platform: yr
-  - platform: ohmconnect
-    id: !secret ohmconnect_id
-
 cover:
   - platform: myq
     username: !secret myq_username
