@@ -23,7 +23,7 @@ pt_ping:
   picture: https://graph.facebook.com/218471/picture
   track: true
 
-michelles_ping:
+michelle_ping:
   hide_if_away: false
   icon:
   mac:
