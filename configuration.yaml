@@ -205,7 +205,6 @@ camera:
     still_image_url: http://192.168.1.14/ISAPI/Streaming/channels/401/picture
     username: admin
     password: !secret hikvision_password
-  - platform: ring
 
 cover:
   - platform: myq
