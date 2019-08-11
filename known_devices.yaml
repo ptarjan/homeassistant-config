@@ -3,7 +3,7 @@ pt:
   hide_if_away: false
   icon:
   mac:
-  name: pt
+  name: pt iphone
   picture: https://graph.facebook.com/218471/picture
   track: true
 
@@ -31,18 +31,18 @@ michelles_ping:
   picture: https://graph.facebook.com/120600349/picture
   track: true
 
-d88f768635b6:
-  hide_if_away: false
-  icon:
-  mac: D8:8F:76:86:35:B6
-  name: michelle nmap
-  picture: https://graph.facebook.com/120600349/picture
-  track: true
-
 d88f7686c642:
   hide_if_away: false
   icon:
   mac: D8:8F:76:86:C6:42
   name: paul nmap
   picture: https://graph.facebook.com/218471/picture
+  track: true
+
+d88f768635b6:
+  hide_if_away: false
+  icon:
+  mac: D8:8F:76:86:35:B6
+  name: michelle nmap
+  picture: https://graph.facebook.com/120600349/picture
   track: true
