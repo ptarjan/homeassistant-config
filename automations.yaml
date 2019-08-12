@@ -241,9 +241,19 @@
     - fri
   action:
     - service: cover.open_cover
-      entity_id: cover.living_room_shades
+      entity_id: cover.living_room_left_big_shade
     - service: cover.open_cover
-      entity_id: cover.office_shades
+      entity_id: cover.living_room_right_big_shade
+    - service: cover.open_cover
+      entity_id: cover.living_room_left_kitchen_shade
+    - service: cover.open_cover
+      entity_id: cover.living_room_right_tv_shade
+    - service: cover.open_cover
+      entity_id: cover.office_entrance_shade
+    - service: cover.open_cover
+      entity_id: cover.office_side_shade
+    - service: cover.open_cover
+      entity_id: cover.office_view_shade
       
 - id: master_bedroom_binds_open
   alias: 'Master Bedroom Blinds Open'
@@ -260,7 +270,15 @@
     - fri
   action:      
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_shades
+      entity_id: cover.master_bedroom_left_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_right_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_michelles_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_pauls_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_facing_bathroom_shade
 
 - id: weekend_binds_open
   alias: 'Weekend Blinds Open'
@@ -274,11 +292,29 @@
     - sun
   action:
     - service: cover.open_cover
-      entity_id: cover.living_room_shades
+      entity_id: cover.living_room_left_big_shade
     - service: cover.open_cover
-      entity_id: cover.office_shades
+      entity_id: cover.living_room_right_big_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_shades
+      entity_id: cover.living_room_left_kitchen_shade
+    - service: cover.open_cover
+      entity_id: cover.living_room_right_tv_shade
+    - service: cover.open_cover
+      entity_id: cover.office_entrance_shade
+    - service: cover.open_cover
+      entity_id: cover.office_side_shade
+    - service: cover.open_cover
+      entity_id: cover.office_view_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_left_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_right_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_michelles_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_pauls_shade
+    - service: cover.open_cover
+      entity_id: cover.master_bedroom_facing_bathroom_shade
 
 - id: sunset_close_blinds
   alias: 'Sunset Close Blinds'
@@ -287,11 +323,29 @@
     event: sunset
   action:
     - service: cover.close_cover
-      entity_id: cover.living_room_shades
+      entity_id: cover.living_room_left_big_shade
     - service: cover.close_cover
-      entity_id: cover.office_shades
+      entity_id: cover.living_room_right_big_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_shades
+      entity_id: cover.living_room_left_kitchen_shade
+    - service: cover.close_cover
+      entity_id: cover.living_room_right_tv_shade
+    - service: cover.close_cover
+      entity_id: cover.office_entrance_shade
+    - service: cover.close_cover
+      entity_id: cover.office_side_shade
+    - service: cover.close_cover
+      entity_id: cover.office_view_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_left_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_right_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_michelles_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_pauls_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_facing_bathroom_shade
       
 - id: sunset_close_blinds_take_2
   alias: 'Sunset Close Blinds Take 2'
@@ -301,12 +355,29 @@
     offset: "00:02:00"
   action:
     - service: cover.close_cover
-      entity_id: cover.living_room_shades
+      entity_id: cover.living_room_left_big_shade
     - service: cover.close_cover
-      entity_id: cover.office_shades
+      entity_id: cover.living_room_right_big_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_shades
-      
+      entity_id: cover.living_room_left_kitchen_shade
+    - service: cover.close_cover
+      entity_id: cover.living_room_right_tv_shade
+    - service: cover.close_cover
+      entity_id: cover.office_entrance_shade
+    - service: cover.close_cover
+      entity_id: cover.office_side_shade
+    - service: cover.close_cover
+      entity_id: cover.office_view_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_left_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_right_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_michelles_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_pauls_shade
+    - service: cover.close_cover
+      entity_id: cover.master_bedroom_facing_bathroom_shade
 
 
 
