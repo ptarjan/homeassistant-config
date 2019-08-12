@@ -172,14 +172,14 @@
       entity_id: alarm_control_panel.blink_sync
     - service: alarm_control_panel.alarm_arm_away
       entity_id: alarm_control_panel.home_alarm
-    - service: climate.set_away_mode
+    - service: nest.set_away_mode
       data:
         entity_id: climate.main_floor
-        away_mode: true
-    - service: climate.set_away_mode
+        away_mode: "away"
+    - service: nest.set_away_mode
       data:
         entity_id: climate.upstairs
-        away_mode: true
+        away_mode: "away"
     - service: camera.enable_motion_detection
       entity_id: camera.living_room
     - service: light.turn_off
@@ -196,14 +196,14 @@
       entity_id: alarm_control_panel.blink_sync
     - service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.home_alarm
-    - service: climate.set_away_mode
+    - service: nest.set_away_mode
       data:
         entity_id: climate.main_floor
-        away_mode: false
-    - service: climate.set_away_mode
+        away_mode: "home"
+    - service: nest.set_away_mode
       data:
         entity_id: climate.upstairs
-        away_mode: false
+        away_mode: "home"
     - service: camera.disable_motion_detection
       entity_id: camera.living_room
     - service: light.turn_on
