@@ -235,13 +235,6 @@ ring:
     password: !secret ring_password
 
 device_tracker:
-#  - platform: nmap_tracker
-#    hosts:
-#      - 192.168.1.110
-#      - 192.168.1.111
-#    consider_home: 600
-#    home_interval: 10
-#    interval_seconds: 10
   - platform: ping
     hosts:
       pt_ping: 192.168.1.110
