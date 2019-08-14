@@ -401,15 +401,3 @@
   - service: hassio.addon_restart
     data:
       addon: core_letsencrypt
-
-- id: travis_passed
-  alias: System Travis Build Passed
-  trigger:
-    - platform: state
-      entity_id: sensor.travis_build_status
-      from: "started"
-      to: "passed"
-  action:
-    - service: hassio.addon_start
-      data:
-        addon: core_git_pull
