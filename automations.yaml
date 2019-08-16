@@ -174,16 +174,11 @@
       entity_id: alarm_control_panel.home_alarm
     - service: nest.set_away_mode
       data:
-        entity_id: climate.main_floor
-        away_mode: "away"
-    - service: nest.set_away_mode
-      data:
-        entity_id: climate.upstairs
         away_mode: "away"
     - service: camera.enable_motion_detection
       entity_id: camera.living_room
     - service: light.turn_off
-      entity_id: group.all_lights      
+      entity_id: group.all_lights
 
 - id: arrive_home
   alias: 'Comming Home'
@@ -198,11 +193,6 @@
       entity_id: alarm_control_panel.home_alarm
     - service: nest.set_away_mode
       data:
-        entity_id: climate.main_floor
-        away_mode: "home"
-    - service: nest.set_away_mode
-      data:
-        entity_id: climate.upstairs
         away_mode: "home"
     - service: camera.disable_motion_detection
       entity_id: camera.living_room
