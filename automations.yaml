@@ -219,7 +219,7 @@
   alias: Alarm Triggered
   trigger:
      platform: state
-     entity_id: alarm_control_panel.alarm
+     entity_id: alarm_control_panel.home_alarm
      to: 'triggered'
   action:
   - data_template:
