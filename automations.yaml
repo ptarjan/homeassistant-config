@@ -196,16 +196,24 @@
 #        away_mode: "home"
 #    - service: camera.disable_motion_detection
 #      entity_id: camera.living_room
+
+- id: arrive_home_paul
+  alias: 'Paul Comming Home'
+  trigger:
+    - platform: state
+      entity_id: device_tracker.pt_ping
+      to: 'home'
+  action:
     - service: light.turn_on
       entity_id: light.front_outside_light
     - service: light.turn_on
       entity_id: light.front_outside_dim_light
       
-- id: arrive_home_and_stay
+- id: arrive_home_and_stay_paul
   alias: 'Comming Home And Stay'
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: device_tracker.pt_ping
       to: 'home'
       for:
         minutes: 5
