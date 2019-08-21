@@ -269,3 +269,68 @@ system_health:
 google_assistant:
   project_id: paul-s-home-assistant
   api_key: !secret google_assistant_api_key
+  entity_config:
+    climate.main_floor:
+      expose: false
+    climate.upstairs:
+      expose: false
+    cover.all_shades:
+      expose: false
+    cover.garage_door_opener_2:
+      expose: false
+    cover.living_room_shades:
+      expose: false
+    cover.master_bedroom_shades:
+      expose: false
+    cover.office_shades:
+      expose: false
+    group.all_automations:
+      expose: false
+    group.all_covers:
+      expose: false
+    group.all_devices:
+      expose: false
+    group.all_lights:
+      expose: false
+    group.all_remotes:
+      expose: false
+    group.all_switches:
+      expose: false
+    light.downstairs:
+      expose: false
+    light.kitchen:
+      expose: false
+    light.living_room:
+      expose: false
+    light.main_floor:
+      expose: false
+    light.master:
+      expose: false
+    light.outside:
+      expose: false
+    light.upstairs:
+      expose: false
+    scene.all_lights_off:
+      expose: false
+    scene.all_shades_close:
+      expose: false
+    scene.all_shades_open:
+      expose: false
+    scene.come_home:
+      expose: false
+    scene.living_room_shades_close:
+      expose: false
+    scene.living_room_shades_open:
+      expose: false
+    scene.master_bedroom_shades_close:
+      expose: false
+    scene.master_bedroom_shades_open:
+      expose: false
+    scene.movie_time:
+      expose: false
+    scene.office_shades_close:
+      expose: false
+    scene.office_shades_open:
+      expose: false
+    scene.tv_time:
+      expose: false
