@@ -10,7 +10,7 @@
     - binary_sensor.front_door
     - binary_sensor.back_door
     - binary_sensor.garage_inside_door
-    - binary_sensor.garage_outdoor_door
+    - binary_sensor.garage_outside_door
     - binary_sensor.guest_door
     - binary_sensor.new_gate_opened
     - binary_sensor.old_gate_opened
