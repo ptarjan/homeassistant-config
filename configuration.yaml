@@ -121,7 +121,7 @@ envisalink:
       name: 'Garage Inside Door'
       type: 'door'
     16:
-      name: 'Garage Outdoor Door'
+      name: 'Garage Outside Door'
       type: 'door'
     17:
       name: 'Unknown 17'
