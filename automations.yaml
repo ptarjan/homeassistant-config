@@ -169,7 +169,7 @@
       to: 'not_home'
   action:
     - service: alarm_control_panel.alarm_arm_away
-      entity_id: alarm_control_panel.blink_sync
+      entity_id: alarm_control_panel.blink_home
     - service: alarm_control_panel.alarm_arm_away
       entity_id: alarm_control_panel.home_alarm
 #    - service: nest.set_away_mode
@@ -188,7 +188,7 @@
       to: 'home'
   action:
     - service: alarm_control_panel.alarm_disarm
-      entity_id: alarm_control_panel.blink_sync
+      entity_id: alarm_control_panel.blink_home
     - service: alarm_control_panel.alarm_disarm
       entity_id: alarm_control_panel.home_alarm
 #    - service: nest.set_away_mode
