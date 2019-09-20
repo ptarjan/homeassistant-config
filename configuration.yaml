@@ -237,7 +237,7 @@ device_tracker:
     hosts:
       pt_ping: 192.168.1.110
       michelle_ping: 192.168.1.111
-    consider_home: 900
+    consider_home: 1200
 
 
 # mqtt:
