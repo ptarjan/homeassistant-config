@@ -25,7 +25,7 @@ http:
   base_url: https://home.paulisageek.com:8123
   ssl_certificate: !secret ssl_fullchain
   ssl_key: !secret ssl_privkey
-    
+
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -146,7 +146,7 @@ media_player:
 roku:
   - host: 192.168.1.163
   - host: 192.168.1.164
-  
+
 wemo:
 
 ios:
@@ -181,7 +181,7 @@ binary_sensor:
 
 sensor:
   - platform: ring
-      
+
 camera:
   - platform: generic
     name: Driveway
