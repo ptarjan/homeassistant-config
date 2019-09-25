@@ -182,6 +182,7 @@ binary_sensor:
 sensor:
   - platform: ring
   - platform: yweather
+    woeid: 2362268
     monitored_conditions:
       - weather
       - weather_current
