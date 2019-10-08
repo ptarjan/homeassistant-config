@@ -283,9 +283,9 @@
     - service: cover.open_cover
       entity_id: cover.master_bedroom_right_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_michelles_shade
+      entity_id: cover.master_bedroom_michelle_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_pauls_shade
+      entity_id: cover.master_bedroom_paul_shade
     - service: cover.open_cover
       entity_id: cover.master_bedroom_facing_bathroom_shade
 
@@ -319,9 +319,9 @@
     - service: cover.open_cover
       entity_id: cover.master_bedroom_right_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_michelles_shade
+      entity_id: cover.master_bedroom_michelle_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_pauls_shade
+      entity_id: cover.master_bedroom_paul_shade
     - service: cover.open_cover
       entity_id: cover.master_bedroom_facing_bathroom_shade
 
@@ -350,9 +350,9 @@
     - service: cover.close_cover
       entity_id: cover.master_bedroom_right_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_michelles_shade
+      entity_id: cover.master_bedroom_michelle_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_pauls_shade
+      entity_id: cover.master_bedroom_paul_shade
     - service: cover.close_cover
       entity_id: cover.master_bedroom_facing_bathroom_shade
       
@@ -382,9 +382,9 @@
     - service: cover.close_cover
       entity_id: cover.master_bedroom_right_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_michelles_shade
+      entity_id: cover.master_bedroom_michelle_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_pauls_shade
+      entity_id: cover.master_bedroom_paul_shade
     - service: cover.close_cover
       entity_id: cover.master_bedroom_facing_bathroom_shade
       
