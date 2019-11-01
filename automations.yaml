@@ -396,6 +396,24 @@
   action:
     - service: light.turn_off
       entity_id: group.all_lights
+      
+# TVs
+- id: tv_on
+  alias: Turn TV off when idle
+  trigger:
+  - platform: state
+    to: "idle"
+    for:
+      seconds: 5
+    entity_id:
+    - media_player.man_cave_tv
+    - media_player.living_room_tv
+    - media_player.master_bedroom_tv
+    - media_player.lg_webos_smart_tv
+  action:
+  - service: media_player.turn_off
+    data_template:
+      entity_id: {{ trigger.to_state.entity_id }}
 
 # Addons
 
