@@ -143,6 +143,8 @@ media_player:
   - platform: denon
     host: 192.168.1.171
 
+cast:
+
 # roku:
 #   - host: 192.168.1.163
 #   - host: 192.168.1.164
