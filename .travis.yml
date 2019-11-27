@@ -11,6 +11,7 @@ cache: pip
 python:
   - "3.7"
 install:
+  - apt-get install -y python-dev pkg-config libavformat-dev libavcodec-dev libavdevice-dev libavutil-dev libswscale-dev libavresample-dev libavfilter-dev
   - pip3 install homeassistant
 script:
   - mv secrets-dummy.yaml secrets.yaml
