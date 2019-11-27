@@ -28,9 +28,6 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Cloud
-# cloud:
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
