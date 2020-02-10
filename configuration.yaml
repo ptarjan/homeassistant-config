@@ -155,10 +155,6 @@ binary_sensor:
     ssl: False
     username: admin
     password: !secret hikvision_password
-  - platform: ring
-
-sensor:
-  - platform: ring
 
 camera:
   - platform: generic
