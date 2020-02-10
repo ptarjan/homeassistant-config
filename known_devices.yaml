@@ -1,5 +1,4 @@
 pt:
-  hide_if_away: false
   icon:
   mac:
   name: pt iphone
@@ -7,15 +6,13 @@ pt:
   track: true
 
 michelles_iphone:
-  hide_if_away: false
   icon:
   mac:
   name: michelles iphone
   picture: https://graph.facebook.com/120600349/picture
   track: true
-  
+
 pt_ping:
-  hide_if_away: false
   icon:
   mac:
   name: pt ping
@@ -23,7 +20,6 @@ pt_ping:
   track: true
 
 michelle_ping:
-  hide_if_away: false
   icon:
   mac:
   name: michelle ping
