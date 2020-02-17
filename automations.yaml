@@ -158,7 +158,40 @@
     data:
       entity_id: light.hallway_light
 
-
+- id: entrance_lights_when_motion
+  alias: Turn on outside lights with camera motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_camera_motion	
+    to: "on"
+  condition:
+  - condition: sun
+    after: sunset
+  - condition: sun
+    before: sunrise
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: light.front_outside_dim_light
+  - service: light.turn_on
+    data:
+      entity_id: light.front_outside_light
+- id: entrance_lights_without_motion
+  alias: Turn off outside lights without camera motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_camera_motion	
+    to: "off"
+    for:
+      minutes: 3
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: light.front_outside_dim_light
+  - service: light.turn_off
+    data:
+      entity_id: light.front_outside_light
+      
 # Alarms
 
 - id: leave_home
