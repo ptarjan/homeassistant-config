@@ -1,7 +1,6 @@
 # Example configuration.yaml entry
-group:
-  devices:
-    name: Paul and Michelle
-    entities:
-      -  device_tracker.pt_ping
-      -  device_tracker.michelle_ping
+devices:
+  name: Paul and Michelle
+  entities:
+    -  device_tracker.pt_ping
+    -  device_tracker.michelle_ping
