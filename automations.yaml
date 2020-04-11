@@ -198,7 +198,7 @@
   alias: 'Leaving Home'
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.devices
       to: 'not_home'
   action:
     - service: alarm_control_panel.alarm_arm_away
@@ -217,7 +217,7 @@
   alias: 'Comming Home'
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.devices
       to: 'home'
   action:
     - service: alarm_control_panel.alarm_disarm
