@@ -188,10 +188,9 @@ notify:
   - name: phones
     platform: group
     services:
-      - service: notify.ios_pt
-      - service: noitfy.ios_michelles_iphone
-      - service: notify.mobile_app_pt
-      - service: notify.ios_michelles_iphone
+      - service: notify_ios_pt
+      - service: noitfy_ios_michelles_iphone
+      - service: notify_mobile_app_pt
 
 nest:
     client_id: !secret nest_id
