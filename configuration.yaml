@@ -31,15 +31,7 @@ conversation:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-
-phone_notification:
-  platform: group
-  name: all_ios_devices
-  services:
-    - service: notify.mobile_app_pt
-    - service: notify.ios_michelles_iphone
-    - service: notify.phones
-    
+   
 wink:
 
 envisalink:
@@ -196,8 +188,10 @@ notify:
   - name: phones
     platform: group
     services:
-      - service: ios_pt
-      - service: ios_michelles_iphone
+      - service: notify.ios_pt
+      - service: noitfy.ios_michelles_iphone
+      - service: notify.mobile_app_pt
+      - service: notify.ios_michelles_iphone
 
 nest:
     client_id: !secret nest_id
