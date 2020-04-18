@@ -30,7 +30,7 @@
   action:
   - data_template:
       message: '{{ trigger.to_state.attributes.friendly_name }} has been opened'
-    service: notify.all_ios_devices
+    service: notify.phones
 - id: door_closed
   alias: Door Closed
   trigger:
@@ -63,7 +63,7 @@
   action:
   - data_template:
       message: '{{ trigger.to_state.attributes.friendly_name }} has been closed'
-    service: notify.all_ios_devices
+    service: notify.phones
 
 - id: door_left_open
   alias: Door is still open
@@ -87,7 +87,7 @@
   action:
   - data_template:
       message: "\U0001F514 The {{ trigger.to_state.attributes.friendly_name }} is still open"
-    service: notify.all_ios_devices
+    service: notify.phones
 
 - id: autoclose_garage_door
   alias: Autoclose Garage Door
@@ -265,7 +265,7 @@
   action:
   - data_template:
       message: "\U0001F514 \U0001F514 \U0001F514 The alarm is going off"
-    service: notify.all_ios_devices
+    service: notify.phones
 
 # Blinds
 - id: binds_open
