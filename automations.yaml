@@ -110,7 +110,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.entrance_light
+      entity_id: light.front_foyer_main_lights
 - id: entrance_door_light_off
   alias: Turn off entrance light
   trigger:
@@ -122,7 +122,7 @@
   action:
     service: light.turn_off
     data:
-      entity_id: light.entrance_light
+      entity_id: light.front_foyer_main_lights
 - id: garage_door_light_on
   alias: Turn on stairway light
   trigger:
@@ -132,13 +132,13 @@
   action:
   - service: homeassistant.turn_on
     data:
-      entity_id: switch.downstairs_light
+      entity_id: switch.downstairs_main_lights
   - service: light.turn_on
     data:
-      entity_id: light.downstairs_entrance_light
+      entity_id: light.garage_entry_main_lights
   - service: light.turn_on
     data:
-      entity_id: light.hallway_light
+      entity_id: light.downstairs_hallway_main_lights
 - id: garage_door_light_off
   alias: Turn off stairway light
   trigger:
@@ -150,13 +150,13 @@
   action:
   - service: homeassistant.turn_off
     data:
-      entity_id: switch.downstairs_light
+      entity_id: switch.downstairs_main_lights
   - service: light.turn_off
     data:
-      entity_id: light.downstairs_entrance_light
+      entity_id: light.garage_entry_main_lights
   - service: light.turn_off
     data:
-      entity_id: light.hallway_light
+      entity_id: light.downstairs_hallway_main_lights
 
 - id: entrance_lights_when_motion
   alias: Turn on outside lights with camera motion
@@ -170,12 +170,12 @@
   - condition: sun
     before: sunrise
   action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: light.front_outside_dim_light
   - service: light.turn_on
     data:
-      entity_id: light.front_outside_light
+      entity_id: light.front_porch_overhead_light
+  - service: light.turn_on
+    data:
+      entity_id: light.front_porch_sconces
 - id: entrance_lights_without_motion
   alias: Turn off outside lights without camera motion
   trigger:
@@ -185,12 +185,12 @@
     for:
       minutes: 3
   action:
-  - service: homeassistant.turn_off
-    data:
-      entity_id: light.front_outside_dim_light
   - service: light.turn_off
     data:
-      entity_id: light.front_outside_light
+      entity_id: light.front_porch_overhead_light
+  - service: light.turn_off
+    data:
+      entity_id: light.front_porch_sconces
 
 # Alarms
 
@@ -211,7 +211,7 @@
 #    - service: camera.enable_motion_detection
 #      entity_id: camera.living_room
     - service: light.turn_off
-      entity_id: group.all_lights
+      entity_id: all
 
 - id: arrive_home
   alias: 'Comming Home'
@@ -238,9 +238,9 @@
       to: 'home'
   action:
     - service: light.turn_on
-      entity_id: light.front_outside_light
+      entity_id: light.front_porch_overhead_light
     - service: light.turn_on
-      entity_id: light.front_outside_dim_light
+      entity_id: light.front_porch_sconces
       
 - id: arrive_home_and_stay_paul
   alias: 'Comming Home And Stay'
@@ -252,9 +252,9 @@
         minutes: 5
   action:
     - service: light.turn_off
-      entity_id: light.front_outside_light
+      entity_id: light.front_porch_overhead_light
     - service: light.turn_off
-      entity_id: light.front_outside_dim_light
+      entity_id: light.front_porch_sconces
 
 - id: alarm_triggered
   alias: Alarm Triggered
