@@ -214,6 +214,11 @@ device_tracker:
       michelle_ping: 192.168.1.111
     consider_home: 1200
 
+lutron_caseta:
+    host: 192.168.1.170
+    keyfile: caseta.key
+    certfile: caseta.crt
+    ca_certs: caseta-bridge.crt
 
 # mqtt:
 
