@@ -12,7 +12,7 @@
     - binary_sensor.garage_inside_door
     - binary_sensor.garage_outside_door
     - binary_sensor.guest_door
-    - binary_sensor.new_gate_opened
+    - binary_sensor.new_gate_contact
     - binary_sensor.old_gate_contact
     - binary_sensor.back_bedroom_window
     - binary_sensor.dining_room_window
@@ -45,7 +45,7 @@
     - binary_sensor.garage_inside_door
     - binary_sensor.garage_outdoor_door
     - binary_sensor.guest_door
-    - binary_sensor.new_gate_opened
+    - binary_sensor.new_gate_contact
     - binary_sensor.old_gate_contact
     - binary_sensor.back_bedroom_window
     - binary_sensor.dining_room_window
@@ -78,7 +78,7 @@
     - binary_sensor.back_door
     - binary_sensor.garage_outside_door
     - binary_sensor.old_gate_contact
-    - binary_sensor.new_gate_opened
+    - binary_sensor.new_gate_contact
   - platform: state
     to: open
     for:
