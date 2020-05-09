@@ -320,7 +320,7 @@
     - service: cover.open_cover
       entity_id: cover.master_bedroom_paul_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_facing_bathroom_shade
+      entity_id: cover.master_bedroom_bathroom_shade
 
 - id: weekend_binds_open
   alias: 'Weekend Blinds Open'
@@ -356,7 +356,7 @@
     - service: cover.open_cover
       entity_id: cover.master_bedroom_paul_shade
     - service: cover.open_cover
-      entity_id: cover.master_bedroom_facing_bathroom_shade
+      entity_id: cover.master_bedroom_bathroom_shade
 
 - id: sunset_close_blinds
   alias: 'Sunset Close Blinds'
@@ -387,7 +387,7 @@
     - service: cover.close_cover
       entity_id: cover.master_bedroom_paul_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_facing_bathroom_shade
+      entity_id: cover.master_bedroom_bathroom_shade
 
 - id: sunset_close_blinds_take_2
   alias: 'Sunset Close Blinds Take 2'
@@ -419,7 +419,7 @@
     - service: cover.close_cover
       entity_id: cover.master_bedroom_paul_shade
     - service: cover.close_cover
-      entity_id: cover.master_bedroom_facing_bathroom_shade
+      entity_id: cover.master_bedroom_bathroom_shade
 
 - id: nighttime_lights_off
   alias: 'Nightime Lights Off'
