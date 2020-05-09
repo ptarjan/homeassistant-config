@@ -289,7 +289,7 @@
     - service: cover.open_cover
       entity_id: cover.living_room_kichen_shade
     - service: cover.open_cover
-      entity_id: cover.living_room_right_tv_shade
+      entity_id: cover.living_room_tv_shade
     - service: cover.open_cover
       entity_id: cover.office_entrance_shade
     - service: cover.open_cover
@@ -340,7 +340,7 @@
     - service: cover.open_cover
       entity_id: cover.living_room_kichen_shade
     - service: cover.open_cover
-      entity_id: cover.living_room_right_tv_shade
+      entity_id: cover.living_room_tv_shade
     - service: cover.open_cover
       entity_id: cover.office_entrance_shade
     - service: cover.open_cover
@@ -371,7 +371,7 @@
     - service: cover.close_cover
       entity_id: cover.living_room_kichen_shade
     - service: cover.close_cover
-      entity_id: cover.living_room_right_tv_shade
+      entity_id: cover.living_room_tv_shade
     - service: cover.close_cover
       entity_id: cover.office_entrance_shade
     - service: cover.close_cover
@@ -403,7 +403,7 @@
     - service: cover.close_cover
       entity_id: cover.living_room_kichen_shade
     - service: cover.close_cover
-      entity_id: cover.living_room_right_tv_shade
+      entity_id: cover.living_room_tv_shade
     - service: cover.close_cover
       entity_id: cover.office_entrance_shade
     - service: cover.close_cover
