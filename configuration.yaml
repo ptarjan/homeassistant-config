@@ -32,7 +32,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
    
-wink:
+# wink:
 
 envisalink:
   host: 192.168.1.19
