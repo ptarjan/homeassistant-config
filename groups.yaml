@@ -2,5 +2,53 @@
 devices:
   name: Paul and Michelle
   entities:
-    -  device_tracker.pt_ping
-    -  device_tracker.michelle_ping
+    - device_tracker.pt_ping
+    - device_tracker.michelle_ping
+lights:
+  name: Lights
+  entities:
+    - light.back_bedroom_main_lights
+    - light.dining_room_main_light
+    - light.downstairs_hallway_main_lights
+    - light.exterior_back_porch_lights
+    - light.front_bedroom_main_lights
+    - light.front_camera_light
+    - light.front_foyer_main_lights
+    - light.front_porch_overhead_light
+    - light.front_porch_sconces
+    - light.garage_entry_main_lights
+    - light.guest_bedroom_main_lights
+    - light.half_bathroom_main_lights
+    - light.island_left
+    - light.island_middle
+    - light.island_right
+    - light.kitchen_counter_light
+    - light.kitchen_main_lights
+    - light.living_room_ceiling_light
+    - light.living_room_main_lights
+    - light.living_room_mood_light
+    - light.man_cave_main_lights
+    - light.master_bathroom_main_lights
+    - light.master_bathroom_poop_light
+    - light.master_bedroom
+    - light.master_bedroom_closet_main_lights
+    - light.master_bedroom_main_lights
+    - light.office_light
+    - light.pauls_nightstand
+    - light.wine_room_main_lights
+    
+blinds:
+  name: Blinds
+  entities:
+    - cover.living_room_left_big_shade
+    - cover.living_room_right_big_shade
+    - cover.living_room_kichen_shade
+    - cover.living_room_tv_shade
+    - cover.office_entrance_shade
+    - cover.office_side_shade
+    - cover.office_view_shade
+    - cover.master_bedroom_left_shade
+    - cover.master_bedroom_right_shade
+    - cover.master_bedroom_michelle_shade
+    - cover.master_bedroom_paul_shade
+    - cover.master_bedroom_bathroom_shade
