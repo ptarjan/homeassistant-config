@@ -420,7 +420,7 @@
       entity_id: cover.master_bedroom_paul_shade
     - service: cover.close_cover
       entity_id: cover.master_bedroom_bathroom_shade
-      
+
 - id: master_bedroom_binds_close_hot
   alias: 'Master Bedroom Blinds Close On Hot Days'
   trigger:
@@ -428,8 +428,8 @@
     at: "14:00:00"
   condition:
   - condition: template
-    value_template: "{{ state_attr('weather.hopi_house', 'temperature') | int > 75}}"
-  action:      
+    value_template: "{{ state_attr('weather.home', 'temperature') | int > 75}}"
+  action:
     - service: cover.close_cover
       entity_id: cover.master_bedroom_left_shade
     - service: cover.close_cover
