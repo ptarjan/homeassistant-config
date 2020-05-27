@@ -292,8 +292,8 @@
       entity_id: cover.living_room_tv_shade
     - service: cover.open_cover
       entity_id: cover.office_entrance_shade
-    - service: cover.open_cover
-      entity_id: cover.office_side_shade
+      #    - service: cover.open_cover
+      #      entity_id: cover.office_side_shade
     - service: cover.open_cover
       entity_id: cover.office_view_shade
       
