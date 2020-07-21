@@ -188,6 +188,7 @@ notify:
       - service: ios_pt
       - service: ios_michelles_iphone
       - service: mobile_app_pt
+      - service: mobile_app_michelles_iphone
 
 nest:
     client_id: !secret nest_id
