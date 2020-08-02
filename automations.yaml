@@ -307,7 +307,6 @@
     weekday:
     - mon
     - tue
-    - wed
     - thu
     - fri
   action:      
