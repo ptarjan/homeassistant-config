@@ -1,17 +1,3 @@
-pt:
-  icon:
-  mac:
-  name: pt iphone
-  picture: https://graph.facebook.com/218471/picture
-  track: true
-
-michelles_iphone:
-  icon:
-  mac:
-  name: michelles iphone
-  picture: https://graph.facebook.com/120600349/picture
-  track: true
-
 pt_ping:
   icon:
   mac:
