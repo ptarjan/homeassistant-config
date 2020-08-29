@@ -25,3 +25,10 @@ michelle_ping:
   name: michelle ping
   picture: https://graph.facebook.com/120600349/picture
   track: true
+  
+kelsi_ping:
+  icon:
+  mac:
+  name: kelsi ping
+  picture:
+  track: true
