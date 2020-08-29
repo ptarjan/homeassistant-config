@@ -179,10 +179,9 @@ notify:
   - name: phones
     platform: group
     services:
-      - service: ios_pt
-      - service: ios_michelles_iphone
       - service: mobile_app_pt
       - service: mobile_app_michelle_iphone
+      - service: mobile_app_iphone
 
 nest:
     client_id: !secret nest_id
