@@ -204,6 +204,7 @@ device_tracker:
     hosts:
       pt_ping: 192.168.1.110
       michelle_ping: 192.168.1.111
+      kelsi_ping: 192.168.1.112
     consider_home: 1200
 
 lutron_caseta:
