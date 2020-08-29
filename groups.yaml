@@ -1,9 +1,10 @@
 # Example configuration.yaml entry
 devices:
-  name: Paul and Michelle
+  name: Residents
   entities:
     - device_tracker.pt_ping
     - device_tracker.michelle_ping
+    - device_tracker.kelsi_ping
 lights:
   name: Lights
   entities:
