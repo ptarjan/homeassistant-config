@@ -20,9 +20,9 @@ lights:
     - light.garage_entry_main_lights
     - light.guest_bedroom_main_lights
     - light.half_bathroom_main_lights
-    - light.island_left
-    - light.island_middle
-    - light.island_right
+    - light.left_island
+    - light.middle_island
+    - light.right_island
     - light.kitchen_counter_light
     - light.kitchen_main_lights
     - light.living_room_ceiling_light
@@ -35,7 +35,7 @@ lights:
     - light.master_bedroom_closet_main_lights
     - light.master_bedroom_main_lights
     - light.office_light
-    - light.pauls_nightstand
+    - light.paul_s_nightstand
     - light.wine_room_main_lights
     
 blinds:
@@ -53,3 +53,7 @@ blinds:
     - cover.master_bedroom_michelle_shade
     - cover.master_bedroom_paul_shade
     - cover.master_bedroom_bathroom_shade
+    - cover.kelsis_room_front_shade
+    - cover.kelsis_room_side_shade
+    - cover.kids_room_front_shade
+    - cover.kids_room_side_shade
