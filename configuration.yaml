@@ -200,6 +200,11 @@ device_tracker:
       michelle_ping: 192.168.1.111
       kelsi_ping: 192.168.1.112
     consider_home: 1200
+  - platform: ping
+    hosts:
+      pt_ping_low_delay: 192.168.1.110
+      michelle_ping_low_delay: 192.168.1.111
+      kelsi_ping_low_delay: 192.168.1.112
 
 lutron_caseta:
     host: 192.168.1.170
