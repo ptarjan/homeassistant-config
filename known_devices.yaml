@@ -18,3 +18,24 @@ kelsi_ping:
   name: kelsi ping
   picture:
   track: true
+
+pt_ping_low_delay:
+  icon:
+  mac:
+  name: pt_ping_low_delay
+  picture:
+  track: true
+
+michelle_ping_low_delay:
+  icon:
+  mac:
+  name: michelle_ping_low_delay
+  picture:
+  track: true
+
+kelsi_ping_low_delay:
+  icon:
+  mac:
+  name: kelsi_ping_low_delay
+  picture:
+  track: true
