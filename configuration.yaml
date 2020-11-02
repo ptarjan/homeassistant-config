@@ -76,10 +76,10 @@ envisalink:
       name: 'Stairway Window'
       type: 'window'
     11:
-      name: 'Back Bedroom Window'
+      name: 'Kelsi's Bedroom Window'
       type: 'window'
     12:
-      name: 'Front Bedroom Window'
+      name: 'Kid's Bedroom Window'
       type: 'window'
     13:
       name: 'Master Bedroom Window'
