@@ -230,6 +230,8 @@ switch:
 #  - platform: tplink
 #    host: 192.168.1.237
 
+tplink:
+
 #bmw_connected_drive:
 #  name:
 #    username: !secret bmw_username
