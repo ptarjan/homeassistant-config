@@ -164,11 +164,6 @@
     platform: state
     entity_id: binary_sensor.front_camera_motion
     to: "on"
-  condition:
-  - condition: sun
-    after: sunset
-  - condition: sun
-    before: sunrise
   action:
   - service: light.turn_on
     data:
