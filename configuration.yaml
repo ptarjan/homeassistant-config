@@ -233,6 +233,10 @@ switch:
 tplink:
   switch:
     - host: 192.168.1.181
+    - host: 192.168.1.183
+    - host: 192.168.1.184
+    - host: 192.168.1.185
+    - host: 192.168.1.186
 
 #bmw_connected_drive:
 #  name:
