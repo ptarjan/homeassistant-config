@@ -12,13 +12,6 @@ michelle_ping:
   picture: https://graph.facebook.com/120600349/picture
   track: true
   
-kelsi_ping:
-  icon:
-  mac:
-  name: kelsi ping
-  picture:
-  track: true
-
 pt_ping_low_delay:
   icon:
   mac:
@@ -30,12 +23,5 @@ michelle_ping_low_delay:
   icon:
   mac:
   name: michelle_ping_low_delay
-  picture:
-  track: true
-
-kelsi_ping_low_delay:
-  icon:
-  mac:
-  name: kelsi_ping_low_delay
   picture:
   track: true
