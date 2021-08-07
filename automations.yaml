@@ -438,15 +438,3 @@
   - service: hassio.addon_restart
     data:
       addon: core_letsencrypt
-- id: snoo
-  alias: Snoo
-  trigger:
-  - platform: state
-    from: 'Soothing'
-    to: 'Awake'
-    entity_id:
-    - sensor.snoo_state
-  action:
-  - data_template:
-      message: 'Everett needs you'
-    service: notify.mobile_app_michelle_iphone
