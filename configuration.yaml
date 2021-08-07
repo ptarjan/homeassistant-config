@@ -117,9 +117,9 @@ webostv:
 #   - host: 192.168.1.163
 #   - host: 192.168.1.164
 
-wemo:
-  static:
-    - 192.168.1.182
+# wemo:
+#  static:
+#    - 192.168.1.182
 
 ios:
   push:
