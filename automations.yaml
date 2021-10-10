@@ -271,12 +271,13 @@
   alias: Master Bedroom Blinds Open
   trigger:
     platform: time
-    at: '10:00:00'
+    at: '09:00:00'
   condition:
     condition: time
     weekday:
     - mon
     - tue
+    - wed
     - thu
     - fri
   action:
@@ -294,7 +295,7 @@
   alias: Weekend Blinds Open
   trigger:
     platform: time
-    at: '11:00:00'
+    at: '09:00:00'
   condition:
     condition: time
     weekday:
