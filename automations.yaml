@@ -25,6 +25,7 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
+    from: opening
     to: open
     entity_id: cover.garage_door_opener
   action:
@@ -58,6 +59,7 @@
     - binary_sensor.office_window
     - binary_sensor.stairway_window
   - platform: state
+    from: closing
     to: closed
     entity_id: cover.garage_door_opener
   action:
