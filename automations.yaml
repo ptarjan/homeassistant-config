@@ -185,7 +185,7 @@
     data:
       entity_id: light.front_porch_sconces
 - id: leave_home
-  alias: Leaving Home
+  alias: Enable alarm when leaving Home
   trigger:
   - platform: state
     entity_id: group.devices
@@ -234,7 +234,7 @@
     entity_id: light.front_porch_sconces
   mode: single
 - id: alarm_triggered
-  alias: Alarm Triggered
+  alias: Alarm Triggered notification
   trigger:
     platform: state
     entity_id: alarm_control_panel.home_alarm
