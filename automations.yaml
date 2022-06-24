@@ -185,7 +185,7 @@
     data:
       entity_id: light.front_porch_sconces
 - id: leave_home
-  alias: Enable alarm when leaving Home
+  alias: Enable Alarm When Leaving Home
   trigger:
   - platform: state
     entity_id: group.devices
@@ -240,8 +240,14 @@
     entity_id: alarm_control_panel.home_alarm
     to: triggered
   action:
-  - data_template:
+  - data:
       message: 🔔 🔔 🔔 The alarm is going off
+      data:
+        push:
+          sound:
+            name: "default"
+            critical: 1
+            volume: 1.0
     service: notify.phones
 - id: binds_open
   alias: Main Floor Blinds Open
