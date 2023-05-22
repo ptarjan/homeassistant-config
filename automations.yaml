@@ -364,6 +364,12 @@
     entity_id: cover.master_bedroom_paul_shade
   - service: cover.close_cover
     entity_id: cover.master_bedroom_bathroom_shade
+  - service: light.turn_on
+    entity_id: light.office_light
+    brightness_pct: 10
+  - service: light.turn_on
+    entity_id: light.living_room_mood_light
+    brightness_pct: 20
 - id: sunset_close_blinds_take_2
   alias: Sunset Close Blinds Take 2
   trigger:
