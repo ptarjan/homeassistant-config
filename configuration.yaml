@@ -187,10 +187,6 @@ nest:
 #rachio:
 #    api_key: !secret rachio_api_key
 
-blink:
-    username: !secret blink_username
-    password: !secret blink_password
-
 ring:
     username: !secret ring_username
     password: !secret ring_password
